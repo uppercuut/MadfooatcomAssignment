@@ -12,7 +12,8 @@ The Current  ConnectionString for the Back-end is:
 
 Note:the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuilt the Project
 
-The Following  Where Taken:
+The Following  Were Taken:
+
 1-Sender Code : Randomly Generated Number On each Request, that is submit on The server and/or responded to the Client.
 
 2-Time Stamp:The Current Time Stamp On each Request, that is submit on The server and/or responded to the Client.
