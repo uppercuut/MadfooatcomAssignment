@@ -12,7 +12,7 @@ The Current  ConnectionString for the Back-end is:
 
 <h1>Please consider the follwoing notes:</h1>
 
-1-the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuilt the Project.
+1-the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuild the Project.
 
 2-the (base Back-end Url) is in the Web.config of the Fron-end project under the name: "BackEndBaseUrl".
 
