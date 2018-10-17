@@ -11,7 +11,7 @@ namespace UserSubManagementSystem.BackEnd.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/swagger");
         }
     }
 }
