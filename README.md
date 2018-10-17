@@ -10,7 +10,7 @@ The Current  ConnectionString for the Back-end is:
 
 <add name="DefaultConnection" connectionString="data source=localhost\SQLEXPRESS; initial catalog=UserMSDB; integrated security=SSPI" providerName="System.Data.SqlClient" />
 
-<Please consider the follwoing notes:>
+<h1>Please consider the follwoing notes:</h1>
 
 1-the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuilt the Project.
 
@@ -23,7 +23,7 @@ The Current  ConnectionString for the Back-end is:
 
 
 
-<The Following assumption Were Taken:>
+<h1>The Following assumption Were Taken: </h1>
 
 1-Sender Code : Randomly Generated Number On each Request, that is submit on The server and/or responded to the Client.
 
