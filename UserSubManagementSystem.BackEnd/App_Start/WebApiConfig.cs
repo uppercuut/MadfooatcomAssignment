@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using UserSubManagementSystem.BackEnd.Controllers.Api;
+using UserSubManagementSystem.BackEnd.Core;
+using UserSubManagementSystem.BackEnd.Persistence;
 
 namespace UserSubManagementSystem.BackEnd
 {
@@ -16,9 +19,13 @@ namespace UserSubManagementSystem.BackEnd
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+ 
+
+
         }
     }
 }

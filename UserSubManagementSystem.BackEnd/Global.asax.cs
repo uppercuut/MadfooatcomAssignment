@@ -7,6 +7,10 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using UserSubManagementSystem.BackEnd.Core;
+using UserSubManagementSystem.BackEnd.Controllers.Api;
+using System.Reflection;
+using UserSubManagementSystem.BackEnd.App_Start;
 
 namespace UserSubManagementSystem.BackEnd
 {
@@ -14,10 +18,16 @@ namespace UserSubManagementSystem.BackEnd
     {
         void Application_Start(object sender, EventArgs e)
         {
+            IocConfig.Configure();
+
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+        
+
+      
         }
     }
 }
