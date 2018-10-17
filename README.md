@@ -10,9 +10,16 @@ The Current  ConnectionString for the Back-end is:
 
 <add name="DefaultConnection" connectionString="data source=localhost\SQLEXPRESS; initial catalog=UserMSDB; integrated security=SSPI" providerName="System.Data.SqlClient" />
 
-Note:the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuilt the Project
+Please consider the follwoing notes:
 
-The Following  Were Taken:
+1-the connectionString's Name should be always "DefaultConnection". Unless its changed from the UserMSDBContext.cs Class and rebuilt the Project.
+2-the (base Back-end Url) is in the Web.config of the Fron-end project under the name: "BackEndBaseUrl".
+3-A Database Sample is attachted On:/UserSubManagementSystem.BackEnd/DB/.
+4- you may want to add multiple Start-up Projects.(back-end,fron-end) 
+
+
+
+The Following assumption Were Taken:
 
 1-Sender Code : Randomly Generated Number On each Request, that is submit on The server and/or responded to the Client.
 
