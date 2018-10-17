@@ -8,7 +8,7 @@ The DataBase Back Up Can Be Found On:
 
 The Current  ConnectionString for the Back-end is:
 
-<add name="DefaultConnection" connectionString="data source=localhost\SQLEXPRESS; initial catalog=UserMSDB; integrated security=SSPI" providerName="System.Data.SqlClient" />
+ name="DefaultConnection" connectionString="data source=localhost\SQLEXPRESS; initial catalog=UserMSDB; integrated security=SSPI" providerName="System.Data.SqlClient" 
 
 <h1>Please consider the follwoing notes:</h1>
 
