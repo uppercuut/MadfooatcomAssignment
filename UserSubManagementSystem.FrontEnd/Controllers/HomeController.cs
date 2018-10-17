@@ -13,7 +13,11 @@ namespace UserSubManagementSystem.FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
-       
+        private string _baseUrl;
+        public HomeController()
+        {
+            _baseUrl = System.Configuration.ConfigurationSettings.AppSettings["BackEndBaseUrl"];
+        }
       
         public ActionResult CreateUser()
         {
@@ -30,7 +34,7 @@ namespace UserSubManagementSystem.FrontEnd.Controllers
             using (var client = new HttpClient())
             {
                  response = await client.PostAsync(
-                    "http://localhost:50234/api/UserApi/CreateUser",
+                    _baseUrl +"/api/UserApi/CreateUser",
                      new StringContent(JsonConvert.SerializeObject(new {TimeStamp = TimeStamp,
                          SdrCode = SdrCode,
                          PrsnlInfo = new { Name = user.Name, DateOfBirth = user.DateOfBirth, Mobile= user.Mobile, Email = user.Email} ,
@@ -40,14 +44,13 @@ namespace UserSubManagementSystem.FrontEnd.Controllers
             return Redirect("/Home/CreateUser?Success=" + response.IsSuccessStatusCode);
         }
 
-
         public ActionResult ViewAllUsers()
         {
             string contents="";
-            using (var wc = new System.Net.WebClient())
-                contents = wc.DownloadString("http://localhost:50234/api/UserApi/GetAll");
-            UsersViewModel list = JsonConvert.DeserializeObject<UsersViewModel>(contents);
-            return View("/Views/Home/ViewAllUsers.cshtml", "/Views/Shared/_Layout.cshtml", list);
+            using (var wc = new System.Net.WebClient())        
+                    contents = wc.DownloadString(_baseUrl + "/api/UserApi/GetAll");
+                    UsersViewModel list = JsonConvert.DeserializeObject<UsersViewModel>(contents);
+                    return View("/Views/Home/ViewAllUsers.cshtml", "/Views/Shared/_Layout.cshtml", list);
         }
   
     }
