@@ -14,8 +14,12 @@ Note:the connectionString's Name should be always "DefaultConnection". Unless it
 
 The Following  Where Taken:
 1-Sender Code : Randomly Generated Number On each Request, that is submit on The server and/or responded to the Client.
+
 2-Time Stamp:The Current Time Stamp On each Request, that is submit on The server and/or responded to the Client.
+
 3- Sender Code and Time Stamp Are not mapped To the data base since the schema was Clear.
+
 4-all requests are built by razor and C# as per requested, Personally, i would go with the JavaScript ajax calls to maintain  
  the intuitive experience.
+ 
 5-Requests and Responses can be mapped as (Json,XML) And json was the Stander approach to Talk Between layers for this application.
